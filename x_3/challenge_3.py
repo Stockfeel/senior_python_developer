@@ -21,13 +21,19 @@ FOLDER = 'ilovecoffee'
 
 
 class CsvHandler:
+
+    @staticmethod
+    def file_dir():
+        return f"{os.path.dirname(os.path.abspath(__file__))}/{FOLDER}"
+
     def __init__(self):
-        if not os.path.exists(FOLDER):
-            os.mkdir(FOLDER)
+        if not os.path.exists(self.file_dir()):
+            os.mkdir(self.file_dir())
         self.create_csv()
 
     def create_csv(self):
-        with open(f"{os.getcwd()}/{FOLDER}/customers.csv", 'w',
+
+        with open(f"{self.file_dir()}/customers.csv", 'w',
                   newline='') as csvfile:
             writer = csv.writer(csvfile)
             writer.writerow(
@@ -60,4 +66,4 @@ class CsvHandler:
         return f"+886{new_phone}"
 
     def random_frequency(self):
-        return random.randrange(0, 21)
+        return str(random.randrange(0, 21))
