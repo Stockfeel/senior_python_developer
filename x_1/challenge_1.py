@@ -38,7 +38,7 @@ class GooglePhone(Phone):
             if element > 10 and element % 2 == 0:
                 heapq.heappush(ans, element)
 
-        return ans
+        return ans[::-1]
 
 
 class TaiwanPhone(Phone):
