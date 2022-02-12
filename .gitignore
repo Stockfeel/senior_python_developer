@@ -1,6 +1,6 @@
 venv
 __pycache__
-ilovecoffee
-ilovecoffee/*
+migrations
 .flake8
 .vscode
+x_3/ilovecoffee
