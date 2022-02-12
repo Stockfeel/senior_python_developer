@@ -31,13 +31,3 @@ class TaiwanPhone(Phone):
 class GooglePhone(Phone):
     def special_freature(self, int_list: list) -> list:
         return sorted(filter(lambda x: x > 10 and x % 2 == 0, int_list), reverse=True)
-
-
-if __name__ == "__main__":
-    #g = GooglePhone(1, 2, 3)
-    #l = g.special_freature([3, 43, 62, 15, 18, 22])
-    # print(l)
-
-    t = TaiwanPhone(12, 2, 3)
-    kk = t.special_freature(39)
-    print(kk)

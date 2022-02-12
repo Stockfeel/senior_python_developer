@@ -64,9 +64,3 @@ class CsvHandler():
             mode = statistics.mode(frequencies)
             average = round(statistics.mean(frequencies), 5)
             print(stat, mode, average)
-
-
-if __name__ == "__main__":
-    c = CsvHandler()
-    c.create_csv()
-    c.calculate_csv()
