@@ -7,6 +7,7 @@ class Phone():
         self.camera_count = camera_count
         self.screen_size = screen_size
 
+
 class GooglePhone(Phone):
     def __init__(self, price=10, camera_count=3, screen_size=5) -> None:
         super().__init__(price, camera_count, screen_size)
@@ -14,7 +15,7 @@ class GooglePhone(Phone):
     def sp_feature(self, nums: List):
         ans = []
         for num in nums:
-            if num%2 == 0:
+            if num % 2 == 0:
                 ans.append(num)
         return sorted(ans, reverse=True)
 
@@ -41,7 +42,7 @@ class TaiwanPhone(Phone):
         fib_num = self.fibonacci(n)
         # print(f"fib_num: {fib_num}")
 
-        x = (fib_num // 10)%10
+        x = (fib_num // 10) % 10
         y = fib_num % 10
 
         ans = 1
@@ -57,10 +58,8 @@ class TaiwanPhone(Phone):
         return ans
 
 
-
-
 if __name__ == '__main__':
-    sample = [1,2,3,6,13,50,100]
+    sample = [1, 2, 3, 6, 13, 50, 100]
     obj = GooglePhone()
     ans = obj.sp_feature(sample)
     print(ans)
