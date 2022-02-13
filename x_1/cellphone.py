@@ -15,7 +15,7 @@ class GooglePhone(Phone):
     def sp_feature(self, nums: List):
         ans = []
         for num in nums:
-            if num % 2 == 0:
+            if (num % 2 == 0) and num > 10:
                 ans.append(num)
         return sorted(ans, reverse=True)
 
@@ -59,12 +59,12 @@ class TaiwanPhone(Phone):
 
 
 if __name__ == '__main__':
-    sample = [1, 2, 3, 6, 13, 50, 100]
+    sample = [1, 2, 3, 6, 12, 16, 13, 50, 100]
     obj = GooglePhone()
     ans = obj.sp_feature(sample)
     print(ans)
 
-    the_n_th_number = 14
+    the_n_th_number = 16
     obj2 = TaiwanPhone()
     ans = obj2.sp_feature(the_n_th_number)
     print(ans)
